@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: Futura-Std-Medium;
+    src: url ('assets/Futura-Std-Medium.otf')
+    format('opentype');
+    }
