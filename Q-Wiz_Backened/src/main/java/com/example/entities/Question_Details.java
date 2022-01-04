@@ -39,7 +39,7 @@ public class Question_Details {
 
 	@ManyToOne
 	@Column (name = "quiz_id")
-	private String quizId;
+	private int quizId;
     
 	@Column (name = "question")
 	private String question;
