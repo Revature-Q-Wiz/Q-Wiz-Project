@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginRegisterComponent } from './login-register/login-register.component';
 import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 import { CreateQuestionAnswerComponent } from './create-question-answer/create-question-answer.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -21,8 +20,7 @@ import { LogoutComponent } from './logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
+    LoginRegisterComponent,
     CreateQuizComponent,
     CreateQuestionAnswerComponent,
     NavbarComponent,
