@@ -28,20 +28,24 @@ import lombok.Setter;
 
 @Entity
 
-@Table(name = "quiz")
+@Table(name = "records")
 
-public class Quiz {
+public class Records {
+
 	@Id
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private int quiz_id;
+	private int record_id;
 
 	@ManyToOne
 	@Column (name = "user_id")
 	private int userId;
-    
-	@Column (name = "title")
-	private String title;
 	
+	@ManyToOne
+	@Column (name = "quiz_id")
+	private int quizId;
+	
+	@Column (name = "score")
+	private int score;
 }
