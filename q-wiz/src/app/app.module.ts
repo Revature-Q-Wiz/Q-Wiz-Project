@@ -16,6 +16,7 @@ import { FilterByTagsComponent } from './filter-by-tags/filter-by-tags.component
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from 'src/routes';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { appRoutes } from 'src/routes';
     ResultComponent,
     CreateTagsComponent,
     FilterByTagsComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

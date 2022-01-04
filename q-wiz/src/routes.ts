@@ -9,9 +9,11 @@ import { LeaderboardComponent } from './app/leaderboard/leaderboard.component';
 export const appRoutes : Routes = [
 
     {path: '', redirectTo: '/login', pathMatch: 'full'},
+    {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'create-quiz', component: CreateQuizComponent},
     {path: 'take-quiz', component:TakeQuizComponent},
-    {path: 'leaderboard', component:LeaderboardComponent}
+    {path: 'leaderboard', component:LeaderboardComponent},
+    {path: 'logout', redirectTo: '', pathMatch: 'full'}
 
 ];
