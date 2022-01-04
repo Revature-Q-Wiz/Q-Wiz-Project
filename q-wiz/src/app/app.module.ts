@@ -12,6 +12,7 @@ import { TakeQuizComponent } from './take-quiz/take-quiz.component';
 import { ResultComponent } from './result/result.component';
 import { CreateTagsComponent } from './create-tags/create-tags.component';
 import { FilterByTagsComponent } from './filter-by-tags/filter-by-tags.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FilterByTagsComponent } from './filter-by-tags/filter-by-tags.component
     TakeQuizComponent,
     ResultComponent,
     CreateTagsComponent,
-    FilterByTagsComponent
+    FilterByTagsComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,
