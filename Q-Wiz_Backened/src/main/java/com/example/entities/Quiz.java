@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-//ORM ( Object Relational Mapping )
+
 
 @Data
 
@@ -27,27 +28,20 @@ import lombok.Setter;
 
 @Entity
 
-@Table(name = "user_info")
+@Table(name = "quiz")
 
-public class User_Info {
+public class Quiz {
 	@Id
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private int user_id;
+	private int quiz_id;
 
-	@Column (unique = true)
-	private String userName;
-	
-	@Column (name = "first_name")
-	private String first_name;
+	@ManyToOne
+	@Column (name = "user_id")
+	private String userId;
     
-	@Column (name = "last_name")
-	private String last_name;
+	@Column (name = "title")
+	private String title;
 	
-	@Column (name = "email")
-	private String email;
-
-	@Column (name = "password")
-	private String passWord;
 }
