@@ -9,7 +9,11 @@ export class LoginRegisterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  toggleOn:boolean = true;
+
+  ngOnInit() {
+this.toggleOn = true;
+
   }
 
 }
