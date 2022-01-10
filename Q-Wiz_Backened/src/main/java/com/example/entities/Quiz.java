@@ -17,29 +17,20 @@ import lombok.Setter;
 
 
 @Data
-
 @Getter
-
 @Setter
-
 @AllArgsConstructor
-
 @NoArgsConstructor
-
 @Entity
-
 @Table(name = "quiz")
-
 public class Quiz {
 	@Id
-
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private int quiz_id;
 
 	@ManyToOne
-	@Column (name = "user_id")
-	private int userId;
+	@Column (name = "user_name")
+	private String userName;
     
 	@Column (name = "title")
 	private String title;

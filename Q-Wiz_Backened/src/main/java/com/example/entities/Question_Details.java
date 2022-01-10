@@ -16,25 +16,15 @@ import lombok.Setter;
 
 
 @Data
-
 @Getter
-
 @Setter
-
 @AllArgsConstructor
-
 @NoArgsConstructor
-
 @Entity
-
 @Table(name = "question_details")
-
 public class Question_Details {
-
 	@Id
-
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private int question_id;
 
 	@ManyToOne

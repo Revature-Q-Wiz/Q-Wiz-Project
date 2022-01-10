@@ -17,25 +17,15 @@ import lombok.Setter;
 
 
 @Data
-
 @Getter
-
 @Setter
-
 @AllArgsConstructor
-
 @NoArgsConstructor
-
 @Entity
-
-@Table(name = "choices")
-
+@Table(name = "answer_details")
 public class Choices {
-	
 	@Id
-
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private int answer_id;
 	
 	@ManyToOne
@@ -47,7 +37,7 @@ public class Choices {
 	private int questionId;
 	
 	@Column (name = "is_correct ")
-	private String isCorrect;
+	private boolean isCorrect;
 
 	@Column (name = "answer")
 	private String answer;

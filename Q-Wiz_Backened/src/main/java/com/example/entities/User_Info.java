@@ -16,27 +16,18 @@ import lombok.Setter;
 //ORM ( Object Relational Mapping )
 
 @Data
-
 @Getter
-
 @Setter
-
 @AllArgsConstructor
-
 @NoArgsConstructor
-
 @Entity
-
 @Table(name = "user_info")
-
 public class User_Info {
 	@Id
-
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private int user_id;
 
-	@Column (unique = true)
+	@Column (name = "user_name", unique = true)
 	private String userName;
 	
 	@Column (name = "first_name")
