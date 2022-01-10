@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<p>take-quiz works!</p>
+
 <!-- This is a card for the question and answers to be on for taking quiz -->
 <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col">
@@ -33,6 +33,14 @@
                         D) Answer ...
                     </label>
                 </div>
+
+                <!-- for selecting ONE answer instead of multiple (i.e. checkbox)-->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Default radio
+                    </label>
+                  </div>
 
                 <!-- This is to create a button for Next -->
                 <!-- Next goes to next question, last question Next goes to results page -->
