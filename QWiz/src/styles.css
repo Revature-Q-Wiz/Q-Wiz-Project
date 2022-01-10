@@ -4,7 +4,7 @@
 body {
     align-content: center;
 
-    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)fixed;
+    background: linear-gradient(0.25turn, rgb(115,165,194), rgb(185,185,186), rgb(253,181,21))fixed;
     height: stretch;
     background-size: cover;
     background-repeat: no-repeat;
