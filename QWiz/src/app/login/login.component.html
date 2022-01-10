@@ -1,0 +1,99 @@
+<!-- This is a login form -->
+<form class="row g-3">
+    <div class="col-md-6">
+      <label for="inputFirstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="inputFirstName">
+    </div>
+    <div class="col-md-6">
+        <label for="inputLastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="inputLastName">
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-success">Log in</button>
+    </div>
+  </form>
+
+<!-- This gives navigation buttons (if not using router links) -->
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" class="btn btn-danger">Take A Quiz</button>
+    <button type="button" class="btn btn-warning">Make/Delete A Quiz</button>
+    <button type="button" class="btn btn-success">Quiz Result</button>
+    <button type="button" class="btn btn-success">Exit</button>
+</div>
+
+<!-- This would give a drop down button for navigation (if not using router links) -->
+<div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Action
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Take A Quiz</a></li>
+      <li><a class="dropdown-item" href="#">Make/Delete A Quiz</a></li>
+      <li><a class="dropdown-item" href="#">Quiz Result</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Logout/Exit</a></li>
+    </ul>
+  </div>
+
+  <!-- check box or radio button option for answering -->
+  <div class="input-group mb-3">
+    <div class="input-group-text">
+      <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+    </div>
+    <input type="text" class="form-control" aria-label="Text input with checkbox">
+  </div>
+  
+  <div class="input-group">
+    <div class="input-group-text">
+      <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+    </div>
+    <input type="text" class="form-control" aria-label="Text input with radio button">
+  </div>
+
+  <!-- This is a card for the question and answers to be on for taking quiz -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div> 
