@@ -8,11 +8,18 @@
 
 /* This is adding a linear gradient color (Left to Right) for the background - every page */
 body {
+   
     align-content: center;
 
-    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)fixed;
+    background: linear-gradient(0.25turn, rgb(115,165,194), rgb(185,185,186), rgb(253,181,21))fixed;
     height: stretch;
     background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
+
+}
+/* this is for if an input is invalid*/
+input.ng-invalid.ng-dirty{
+    border-bottom-color: red !important;
+    box-shadow: 0 1px 0 0 red !important;
 }

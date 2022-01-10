@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginRegisterComponent implements OnInit {
 
-  constructor() { }
+/*for validation of inputs*/
+  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
 
+  constructor() { }
+/*for hiding/unhiding elements*/
   toggleOn:boolean = true;
 
   ngOnInit() {

@@ -48,4 +48,7 @@ public class Choices {
 	
 	@Column (name = "is_correct ")
 	private String isCorrect;
+
+	@Column (name = "answer")
+	private String answer;
 }
