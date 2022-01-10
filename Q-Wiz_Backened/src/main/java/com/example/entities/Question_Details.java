@@ -44,7 +44,10 @@ public class Question_Details {
 	@Column (name = "question")
 	private String question;
 	
-	@Column (name = "type_of_question")
-	private String typeOfQuestion;
+	@Column (name = "question_type1")
+	private String type1;
+
+	@Column (name = "question_type2")
+	private String type2;
 	
 }
