@@ -1,12 +1,11 @@
 <app-navbar></app-navbar>
 
 <!-- This is a card for the question and answers to be on for taking quiz -->
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Qwiz</h5>
-                <h1 class="card-text"> # Question ...?</h1>
+<div class="card border-secondary mb-3">
+    <div class="card-header">
+    <div class="card-body text-secondary">
+        <h4 class="card-title">Qwiz</h4>
+                <h5 class="card-text"> # Question ...?</h5>
 
                 <!-- this is a check box for user to use to signify answer picked -->
                 <div id="answers" class="form-check">
@@ -38,15 +37,48 @@
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1">
-                      Default radio
+                      Single Answer
                     </label>
                   </div>
-
-                <!-- This is to create a button for Next -->
-                <!-- Next goes to next question, last question Next goes to results page -->
-                <div>
-                    <button id="button" type="button" class="btn btn-primary">Next</button>
-                </div>
-
+                  <button type="button" class="btn btn-primary">Next</button>
+                <!-- next goes to next ?, @ last ? goes to results page -->
             </div>
         </div>
+
+            <!--
+
+    
+                <h6>Check all answers that are correct</h6>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="is_correct"
+                            aria-label="Checkbox for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="A) answers ...">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="is_correct"
+                            aria-label="Checkbox for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="B) answers ...">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="is_correct"
+                            aria-label="Checkbox for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="C) answers ...">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="is_correct"
+                            aria-label="Checkbox for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="D) answers ...">
+                </div>
+                <button type="button" class="btn btn-primary">Next</button>
+                 next goes to next ?, @ last ? goes to results page 
+            </div>
+        </div>
+    -->
