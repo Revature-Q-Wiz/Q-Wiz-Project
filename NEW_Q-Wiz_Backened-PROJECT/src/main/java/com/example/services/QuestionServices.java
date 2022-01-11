@@ -12,7 +12,7 @@ public interface QuestionServices {
 	
 	public Question_Details addQuestion(Question_Details question);
 	
-	public Question_Details deleteQuestion(int id);
+	public void deleteQuestion(int id);
 	
 	public Question_Details 
 	updateQuestion(int id, Question_Details question);
