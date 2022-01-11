@@ -5,6 +5,7 @@ import { TakeQuizComponent } from './app/take-quiz/take-quiz.component';
 import { LeaderboardComponent } from './app/leaderboard/leaderboard.component';
 import { LogoutComponent } from './app/logout/logout.component';
 import { ProfileComponent } from './app/profile/profile.component';
+import { ResultComponent } from './app/result/result.component';
 
 
 export const appRoutes : Routes = [
@@ -15,6 +16,7 @@ export const appRoutes : Routes = [
     {path: 'create-quiz', component: CreateQuizComponent},
     {path: 'take-quiz', component:TakeQuizComponent},
     {path: 'leaderboard', component:LeaderboardComponent},
-    {path: 'logout', component:LogoutComponent}
+    {path: 'logout', component:LogoutComponent},
+    {path: 'result', component:ResultComponent}
 
 ];
