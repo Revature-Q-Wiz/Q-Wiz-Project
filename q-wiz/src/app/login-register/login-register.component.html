@@ -1,22 +1,32 @@
 <app-navbar></app-navbar>
-<p>login works!</p>
 
 <!-- This is a login form -->
-<div class="container-fluid" id="loginAccount" *ngIf="toggleOn">
-<form #loginForm="ngForm" class="row g-3">
-    <div class="col-md-3">
-        <label for="inputEmail" class="form-label">Email</label>
-        <input type="email" name="Email" #Email ngModel required [pattern]="emailPattern">
+<div class="row" id="loginAccount" *ngIf="toggleOn">
+  <div class="col s6 offset-s3">
+    <div class="card">
+      <div class="card-content">
+        <form #loginForm="ngForm">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="email" placeholder="Email" name="email" #Email ngModel required [pattern]="emailPattern">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="password" placeholder="Password" name="password" #Password ngModel required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <button type="submit" [disabled]="!loginForm.valid" class="btn btn-warning">Log in</button>
+              <p id="p-index">To create an account, <button (click)="toggleOn =!toggleOn" class="btn btn-secondary"
+                  id="create-link">click here.</button></p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="col-md-3">
-      <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" name="Password" #Password ngModel required>
-    </div>
-    <div class="col-12">
-      <button type="submit" [disabled]="!loginForm.valid" class="btn btn-warning">Log in</button>
-      <p id="p-index">To create an account, <button (click)="toggleOn =!toggleOn" class="btn btn-secondary" id="create-link">click here.</button></p>
-    </div>
-  </form>
+  </div>
 </div>
 
 <!-- This is a register form -->
@@ -27,32 +37,27 @@
           <form #registerForm="ngForm">
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" name="First Name" #Name ngModel required>
-                <label>First Name</label>
+                <input type="text" placeholder="First Name" name="first_name" #Name ngModel required>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" name="Last Name" #Name ngModel required>
-                <label>Last Name</label>
+                <input type="text" placeholder="Last Name" name="last_name" #Name ngModel required>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="email" name="Email" #Email ngModel required [pattern]="emailPattern">
-                <label>Email</label>
+                <input type="email" placeholder="Email" name="email" #Email ngModel required [pattern]="emailPattern">
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" name="Username" #Username ngModel required>
-                <label>Username</label>
+                <input type="text" placeholder="Username" name="user_name" #Username ngModel required>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="password" name="Password" #Password ngModel required>
-                <label>Password</label>
+                <input type="password" placeholder="Password" name="password" #Password ngModel required>
               </div>
             </div>
             <div class="row">
@@ -67,31 +72,3 @@
       </div>
     </div>
   </div>
-<!--
-  
-      <label for="inputEmail" class="form-label">First Name</label>
-      <input type="email" class="form-control" id="inputEmail">
-  </div>
-    <div class="col-md-3">
-      <label for="inputEmail" class="form-label">Last Name</label>
-      <input type="email" class="form-control" id="inputEmail">
-  </div>
-    <div class="col-md-3">
-      <label for="inputEmail" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail">
-  </div>
-      <div class="col-md-3">
-          <label for="inputEmail" class="form-label">Username</label>
-          <input type="email" class="form-control" id="inputEmail">
-      </div>
-      <div class="col-md-3">
-        <label for="inputPassword4" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword4">
-      </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-success">Register</button>
-        <p id="p-index">If you already have an account, <a href="./" id="login-link">click here.</a></p>
-      </div>
-    </form>
-  </div>
--->
