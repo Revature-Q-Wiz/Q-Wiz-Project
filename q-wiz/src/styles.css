@@ -18,6 +18,18 @@ body {
     margin: auto;
 
 }
+
+/* background for all paragraphs*/
+p {
+    color: whitesmoke;
+    text-shadow: 1em;
+    font-weight: bolder;
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+}
+
+
 /* this is for if an input is invalid*/
 input.ng-invalid.ng-dirty{
     border-bottom-color: red !important;

@@ -1,5 +1,6 @@
 package com.example.services;
 
+
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -14,5 +15,9 @@ public interface QuizService {
     public Quiz addQuiz(Quiz quiz);
     public void deleteQuiz(int id);
     public Quiz updateQuiz(int id, Quiz quiz);
+
+
+
+    
 
 }
