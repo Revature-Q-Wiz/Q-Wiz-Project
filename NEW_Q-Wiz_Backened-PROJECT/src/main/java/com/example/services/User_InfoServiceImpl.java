@@ -38,6 +38,22 @@ public class User_InfoServiceImpl implements User_InfoService {
 	public User_Info getUser_InfoById(int id) {
 		return repository.findById(id).get();
 		
+		}
+
+
+	@Override
+	public User_Info updateUser_Info(User_Info user_info) {
+		User_Info user_infoDb = repository.findById(user_info.getUser_id()).get();
+		user_infoDb.setFirst_name(user_info.getFirst_name());
+		user_infoDb.setLast_name(user_info.getLast_name());
+		user_infoDb.setEmail(user_info.getEmail());
+		user_infoDb.setPassWord(user_info.getPassWord());
+		user_infoDb.setUser_id(user_info.getUser_id());
+		user_infoDb.setUserName(user_info.getUserName());
+
+		repository.save(user_infoDb);
+		
+		return null;
 	}
 
 }

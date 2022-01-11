@@ -8,5 +8,6 @@ public interface User_InfoService {
 	public User_Info getUser_InfoById(int id);
 	public User_Info addUser_Info(User_Info user_info);
 	public User_Info deleteUser_Info(int id);
+	public User_Info updateUser_Info(User_Info user_info);
 	
 }
