@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class QuizServiceImpl {
+public class QuizServiceImpl implements QuizService{
     
     @Autowired
     private QuizRepository repository;
