@@ -1,9 +1,9 @@
 package com.example.services;
 
-import com.example.entity.Employee;
 import com.example.entity.Quiz;
 
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 public interface QuizService {
     public List<Quiz> getAllQuizzes();
