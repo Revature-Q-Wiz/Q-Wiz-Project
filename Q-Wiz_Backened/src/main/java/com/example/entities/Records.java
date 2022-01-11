@@ -29,8 +29,8 @@ public class Records {
 	private int record_id;
 
 	@ManyToOne
-	@Column (name = "user_name")
-	private String userName;
+	@Column (name = "user_id")
+	private int userId;
 	
 	@ManyToOne
 	@Column (name = "quiz_id")

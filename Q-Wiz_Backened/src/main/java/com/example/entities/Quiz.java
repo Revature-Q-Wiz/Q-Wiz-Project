@@ -29,8 +29,8 @@ public class Quiz {
 	private int quiz_id;
 
 	@ManyToOne
-	@Column (name = "user_name")
-	private String userName;
+	@Column (name = "user_id")
+	private int userId;
     
 	@Column (name = "title")
 	private String title;
