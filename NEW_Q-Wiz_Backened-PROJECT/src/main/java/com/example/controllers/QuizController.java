@@ -23,3 +23,8 @@ package com.example.controllers;
         public Quiz createQuiz(@RequestBody Quiz quiz){return service.addQuiz(quiz);}
         
     }
+<<<<<<< Updated upstream
+=======
+    
+
+>>>>>>> Stashed changes
