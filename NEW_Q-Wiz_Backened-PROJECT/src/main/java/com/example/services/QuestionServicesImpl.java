@@ -17,7 +17,7 @@ public class QuestionServicesImpl implements QuestionServices {
 	private Question_Details_Repository repository;
 
 	@Override
-	public List<Question_Details> getAllQuestions(int quizId) {
+	public List<Question_Details> getAllQuestions() {
 		return repository.findAll();
 	}
 
