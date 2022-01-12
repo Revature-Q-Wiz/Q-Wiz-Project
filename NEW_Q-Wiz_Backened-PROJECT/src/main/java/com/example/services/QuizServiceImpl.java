@@ -1,9 +1,15 @@
 package com.example.services;
 
+
 import com.example.entity.Quiz;
 import com.example.repository.QuizRepository;
+
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class QuizServiceImpl implements QuizService{
