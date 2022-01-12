@@ -6,14 +6,14 @@ import java.util.List;
 
 public interface QuestionServices {
 
-	public List<Question_Details> getAllQuestions();
+	public List<Question_Details> getAllQuestions(int quizId);
 	
-	public Question_Details getQuestionById(int id);
+	public Question_Details getQuestionById(int questionId);
 	
 	public Question_Details addQuestion(Question_Details question);
 	
-	public void deleteQuestion(int id);
+	public void deleteQuestion(int questionId);
 	
 	public Question_Details 
-	updateQuestion(int id, Question_Details question);
+	updateQuestion(int questionId, Question_Details question);
 }
