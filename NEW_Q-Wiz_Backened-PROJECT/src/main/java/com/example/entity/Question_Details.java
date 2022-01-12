@@ -15,9 +15,7 @@ import lombok.Setter;
 
 
 
-@Data
-@Getter
-@Setter
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -39,5 +37,49 @@ public class Question_Details {
 
 	@Column (name = "question_type2")
 	private String type2;
+
+	public String getQuestion() {
+		
+		return question;
+	}
+
+
+	public int getQuestion_id() {
+		return question_id;
+	}
+
+	public void setQuestion_id(int question_id) {
+		this.question_id = question_id;
+	}
+
+	public int getQuizId() {
+		return quizId;
+	}
+
+	public void setQuizId(int quizId) {
+		this.quizId = quizId;
+	}
+
+	public String getType1() {
+		return type1;
+	}
+
+	public void setType1(String type1) {
+		this.type1 = type1;
+	}
+
+	public String getType2() {
+		return type2;
+	}
+
+	public void setType2(String type2) {
+		this.type2 = type2;
+	}
+
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+	
+	
 	
 }

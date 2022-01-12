@@ -38,8 +38,11 @@ public class QuestionServicesImpl implements QuestionServices {
 
 	@Override
 		public Question_Details updateQuestion(int id, Question_Details question) {
-			//Question_Details questiondb = repository.
-			return null;
+		  Question_Details questiondb = repository.findById(id).get();
+		  questiondb.setQuestion(question.getQuestion());
+		  questiondb.setType1(question.getType1());
+		  questiondb.setType2(question.getType2());
+			return repository.save(questiondb);
 		}
 
 }
