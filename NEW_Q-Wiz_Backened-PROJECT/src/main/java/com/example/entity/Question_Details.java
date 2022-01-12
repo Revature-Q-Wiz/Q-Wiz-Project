@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -23,11 +24,14 @@ import lombok.Setter;
 public class Question_Details {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int question_id;
+	private int questionId;
 
 	@ManyToOne
-	@Column (name = "quiz_id")
-	private int quizId;
+	@JoinColumn(name = "quiz_id",
+	referencedColumnName = "quizId")
+	private Quiz quiz;
+	 
+	//private int quizId;
     
 	@Column (name = "question")
 	private String question;
@@ -45,20 +49,20 @@ public class Question_Details {
 
 
 	public int getQuestion_id() {
-		return question_id;
+		return questionId;
 	}
 
 	public void setQuestion_id(int question_id) {
-		this.question_id = question_id;
+		this.questionId = question_id;
 	}
 
-	public int getQuizId() {
-		return quizId;
-	}
+	//public int getQuizId() {
+	//	return quizId;
+	//}
 
-	public void setQuizId(int quizId) {
-		this.quizId = quizId;
-	}
+	//public void setQuizId(int quizId) {
+		//this.quizId = quizId;
+	//}
 
 	public String getType1() {
 		return type1;

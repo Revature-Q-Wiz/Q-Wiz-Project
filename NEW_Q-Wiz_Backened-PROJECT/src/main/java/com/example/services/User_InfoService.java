@@ -3,6 +3,9 @@ package com.example.services;
 import com.example.entity.User_Info;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public interface User_InfoService {
 	public List<User_Info>getAllUser_Info();
 	public User_Info getUser_InfoById(int id);

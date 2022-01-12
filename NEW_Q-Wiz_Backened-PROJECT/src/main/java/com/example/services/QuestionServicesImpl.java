@@ -10,6 +10,7 @@ import com.example.entity.User_Info;
 import com.example.repository.Question_Details_Repository;
 import com.example.repository.User_InfoRepository;
 
+@Service
 public class QuestionServicesImpl implements QuestionServices {
 
 	@Autowired

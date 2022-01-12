@@ -14,10 +14,10 @@ public class QuestionController {
 	@Autowired
 	private QuestionServices service;
 
-	@GetMapping("/take-quiz")
-	public List<Question_Details> getQuestions(int quizId) {
-		return service.getAllQuestions(quizId);
-	}
+//	@GetMapping("/take-quiz")
+//	public List<Question_Details> getQuestions(int quizId) {
+//		return service.getAllQuestions(quizId);
+//	}
 
 	@PostMapping("/create-quiz")
 	public Question_Details createQuestion(@RequestBody Question_Details question) {

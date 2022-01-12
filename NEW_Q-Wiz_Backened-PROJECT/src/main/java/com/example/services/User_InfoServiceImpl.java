@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.example.entity.User_Info;
 import com.example.repository.User_InfoRepository;
 
-
+@Service
 public class User_InfoServiceImpl implements User_InfoService {
 
 	
