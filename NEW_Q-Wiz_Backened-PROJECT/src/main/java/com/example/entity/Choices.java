@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -26,15 +27,18 @@ import lombok.Setter;
 public class Choices {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int answer_id;
+	private int answerId;
 	
 	@ManyToOne
-	@Column (name = "quiz_id")
-	private int quizId;
+	@JoinColumn(name = "quiz_id",
+	referencedColumnName = "quizId")
+	private Quiz quiz;
+	//private int quizId;
 	
 	@ManyToOne
-	@Column (name = "question_id")
-	private int questionId;
+	@JoinColumn(name = "question_id", referencedColumnName = "questionId")
+	private Question_Details questionRef;
+	//private int questionId;
 	
 	@Column (name = "is_correct ")
 	private boolean isCorrect;

@@ -16,10 +16,10 @@ package com.example.controllers;
         @GetMapping("/take-quiz")
         public List<Quiz> getQuizzes(){return service.getAllQuizzes();}
     
-        @GetMapping("/take-quiz/{quiz_id}")
-        public Quiz getQuizById(@PathVariable("quiz_id") int quiz_id){return service.getQuizById(quiz_id);}
-    
-        @PostMapping("/create-quiz")
-        public Quiz createQuiz(@RequestBody Quiz quiz){return service.addQuiz(quiz);}
-        
+//        @GetMapping("/take-quiz/{quiz_id}")
+//        public Quiz getQuizById(@PathVariable("quiz_id") int quiz_id){return service.getQuizById(quiz_id);}
+//    
+//        @PostMapping("/create-quiz")
+//        public Quiz createQuiz(@RequestBody Quiz quiz){return service.addQuiz(quiz);}
+//        
     }

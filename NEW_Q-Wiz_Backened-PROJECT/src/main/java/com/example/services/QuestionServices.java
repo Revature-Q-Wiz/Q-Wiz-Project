@@ -4,9 +4,12 @@ import com.example.entity.Question_Details;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public interface QuestionServices {
 
-	public List<Question_Details> getAllQuestions(int quizId);
+	public List<Question_Details> getAllQuestions();
 	
 	public Question_Details getQuestionById(int questionId);
 	

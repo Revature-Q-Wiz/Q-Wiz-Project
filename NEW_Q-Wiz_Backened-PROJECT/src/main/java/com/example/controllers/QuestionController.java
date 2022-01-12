@@ -14,9 +14,9 @@ public class QuestionController {
 	@Autowired
 	private QuestionServices service;
 
-	@GetMapping("/take-quiz")
-	public List<Question_Details> getQuestions(int quizId) {
-		return service.getAllQuestions(quizId);
+	@GetMapping("/questions")
+	public List<Question_Details> getQuestions() {
+		return service.getAllQuestions();
 	}
 
 	@PostMapping("/create-quiz")
