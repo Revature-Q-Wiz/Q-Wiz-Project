@@ -1,15 +1,14 @@
 package com.example.services;
 
-	import java.util.List;
+import java.util.List;
 
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.entity.Question_Details;
 import com.example.entity.User_Info;
 import com.example.repository.Question_Details_Repository;
 import com.example.repository.User_InfoRepository;
-
 
 public class QuestionServicesImpl implements QuestionServices {
 
@@ -17,13 +16,13 @@ public class QuestionServicesImpl implements QuestionServices {
 	private Question_Details_Repository repository;
 
 	@Override
-	public List<Question_Details> getAllQuestions() {
+	public List<Question_Details> getAllQuestions(int quizId) {
 		return repository.findAll();
 	}
 
 	@Override
-	public Question_Details getQuestionById(int id) {
-		return repository.findById(id).get();
+	public Question_Details getQuestionById(int questionId) {
+		return repository.findById(questionId).get();
 	}
 
 	@Override
@@ -32,14 +31,17 @@ public class QuestionServicesImpl implements QuestionServices {
 	}
 
 	@Override
-	public void deleteQuestion(int id) {
-		repository.deleteById(id);
+	public void deleteQuestion(int questionId) {
+		repository.deleteById(questionId);
 	}
 
 	@Override
-		public Question_Details updateQuestion(int id, Question_Details question) {
-			//Question_Details questiondb = repository.
-			return null;
-		}
+	public Question_Details updateQuestion(int id, Question_Details question) {
+		Question_Details questiondb = repository.findById(id).get();
+		questiondb.setQuestion(question.getQuestion());
+		questiondb.setType1(question.getType1());
+		questiondb.setType2(question.getType2());
+		return repository.save(questiondb);
+	}
 
 }

@@ -3,9 +3,9 @@
 <!-- This is a card for the question and answers to be on for taking quiz -->
 <div class="card border-secondary mb-3">
     <div class="card-header">
-    <div class="card-body text-secondary">
-        <h4 class="card-title">Qwiz</h4>
-                <h5 class="card-text"> # Question ...?</h5>
+    <div class="card-body text-secondary" *ngFor="let quiz of quizzes"> 
+        <h4 class="card-title">{{quiz.title}}</h4>
+                <h5 class="card-text"> <!--{{questionDetails.question}}-->#Question...</h5>
 
                 <!-- this is a check box for user to use to signify answer picked -->
                 <div id="answers" class="form-check">

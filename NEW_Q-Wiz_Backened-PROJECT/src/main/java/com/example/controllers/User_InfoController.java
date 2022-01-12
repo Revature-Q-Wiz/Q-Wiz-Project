@@ -3,20 +3,13 @@ package com.example.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.entity.User_Info;
 import com.example.services.User_InfoService;
 
-
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
-
-@Repository
+@RestController
+@RequestMapping("api")
 public class User_InfoController {
 	
 		@Autowired
