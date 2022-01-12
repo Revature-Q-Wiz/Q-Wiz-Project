@@ -16,7 +16,7 @@ import com.example.services.User_InfoService;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
-@Repository
+@RestController
 public class User_InfoController {
 	
 		@Autowired
