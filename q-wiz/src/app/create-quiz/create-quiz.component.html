@@ -1,44 +1,45 @@
 <app-navbar></app-navbar>
-
 <div class="card border-secondary mb-3">
+    <form #createquiz = "ngForm" (ngSubmit) = "onClickSubmit(createquiz.value)">
     <div class="card-header">
-        <input type="text" class="form-control" aria-label="Text input" placeholder="Qwiz Title">
+        <input type="text" class="form-control" aria-label="Text input" placeholder="Qwiz Title" name="title" ngModel>
     </div>
     <div class="card-body text-secondary">
         <h5 class="card-title">
-            <input type="text" class="form-control" aria-label="Text input" placeholder="# Question ...? ">
+            <input type="text" class="form-control" aria-label="Text input" placeholder="# Question ...? " name="question" ngModel>
         </h5>
         <h6>Check all answers that are correct</h6>
         <div class="input-group mb-3">
             <div class="input-group-text">
                 <input class="form-check-input mt-0" type="checkbox" value="is_correct"
-                    aria-label="Checkbox for following text input">
+                    aria-label="Checkbox for following text input" name="checkA" ngModel> 
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="A) answers ...">
+            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="A) answers ..." name="answerA" ngModel> 
         </div>
         <div class="input-group mb-3">
             <div class="input-group-text">
                 <input class="form-check-input mt-0" type="checkbox" value="is_correct"
-                    aria-label="Checkbox for following text input">
+                    aria-label="Checkbox for following text input" name="checkB" ngModel>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="B) answers ...">
+            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="B) answers ..." name="answerB" ngModel>
         </div>
         <div class="input-group mb-3">
             <div class="input-group-text">
                 <input class="form-check-input mt-0" type="checkbox" value="is_correct"
-                    aria-label="Checkbox for following text input">
+                    aria-label="Checkbox for following text input" name="checkC" ngModel>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="C) answers ...">
+            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="C) answers ..." name="answerC" ngModel>
         </div>
         <div class="input-group mb-3">
             <div class="input-group-text">
                 <input class="form-check-input mt-0" type="checkbox" value="is_correct"
-                    aria-label="Checkbox for following text input">
+                    aria-label="Checkbox for following text input" name="checkD" ngModel>
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="D) answers ...">
+            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="D) answers ..." name="answerD" ngModel>
         </div>
         <button type="button" class="btn btn-primary">Next Q&A</button>
-        <button type="button" class="btn btn-warning">Submit New Qwiz</button>
+        <input type="submit" value="submit">
     </div>
+</form>
 </div>
 
