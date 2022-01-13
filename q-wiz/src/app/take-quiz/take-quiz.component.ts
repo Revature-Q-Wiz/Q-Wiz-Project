@@ -16,6 +16,7 @@ currentQuiz = 0;
 answerSelected = false;
 correctAnswers = 0;
 incorrectAnswers = 0;
+score = 0;
 
 result = false;
 
@@ -35,6 +36,10 @@ this.quizzes = this.quizService.getQuizzes();
     if(correct){
       this.correctAnswers++;
     }
+    else
+    this.incorrectAnswers++;
+
+    this.score = (this.correctAnswers/this.quizzes.length * 100);
     
   }
 

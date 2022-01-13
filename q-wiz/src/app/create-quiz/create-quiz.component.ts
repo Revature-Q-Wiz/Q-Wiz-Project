@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-create-quiz',
@@ -10,6 +11,10 @@ export class CreateQuizComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickSubmit(data: any ){
+    alert("Quiz " + data.title + " has been created!");
   }
 
 }
