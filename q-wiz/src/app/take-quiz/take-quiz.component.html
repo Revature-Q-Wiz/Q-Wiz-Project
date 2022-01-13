@@ -3,82 +3,29 @@
 <!-- This is a card for the question and answers to be on for taking quiz -->
 <div class="card border-secondary mb-3">
     <div class="card-header">
-    <div class="card-body text-secondary" *ngFor="let quiz of quizzes"> 
-        <h4 class="card-title">{{quiz.title}}</h4>
-                <h5 class="card-text"> <!--{{questionDetails.question}}-->#Question...</h5>
-
-                <!-- this is a check box for user to use to signify answer picked -->
-                <div id="answers" class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        A) Answer ...
+        <div class="card-body text-secondary">
+            <h4 class="card-title">Java & Angular Quiz</h4>
+            <div *ngIf="currentQuiz < quizzes.length +1">
+                <h5 class="card-text">{{currentQuiz +1}} of {{quizzes.length}} {{quizzes[currentQuiz].question}}</h5>
+                <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer">
+                    <label>
+                        <!--appBackground [correctAnswer]="quiz.correct"-->
+                        <li class="list-group-item" >
+                            <input type="radio" name="options" (change)="onAnswer(quiz.correct)"
+                                >
+                        <li class="list-group-item">{{quiz.option}}</li>
                     </label>
+                </ul>
+            </div>
+            <div *ngIf="currentQuiz > quizzes.length">
+                <button class="btn btn-warning" (click)="showResult()">Submit Quiz</button>
+                <!--after submitting we will show amount of correct/incorrect answers-->
+                <div>
+                    Correct Answers: {{correctAnswers}} | Incorrect Ansewers: {{incorrectAnswers}}
                 </div>
-                <div id="answers" class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        B) Answer ...
-                    </label>
-                </div>
-                <div id="answers" class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        C) Answer ...
-                    </label>
-                </div>
-                <div id="answers" class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        D) Answer ...
-                    </label>
-                </div>
-
-                <!-- for selecting ONE answer instead of multiple (i.e. checkbox)-->
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Single Answer
-                    </label>
-                  </div>
-                  <button type="button" class="btn btn-primary">Next</button>
-                <!-- next goes to next ?, @ last ? goes to results page -->
             </div>
         </div>
+    </div>
+</div>
 
-            <!--
-
-    
-                <h6>Check all answers that are correct</h6>
-                <div class="input-group mb-3">
-                    <div class="input-group-text">
-                        <input class="form-check-input mt-0" type="checkbox" value="is_correct"
-                            aria-label="Checkbox for following text input">
-                    </div>
-                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="A) answers ...">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-text">
-                        <input class="form-check-input mt-0" type="checkbox" value="is_correct"
-                            aria-label="Checkbox for following text input">
-                    </div>
-                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="B) answers ...">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-text">
-                        <input class="form-check-input mt-0" type="checkbox" value="is_correct"
-                            aria-label="Checkbox for following text input">
-                    </div>
-                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="C) answers ...">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-text">
-                        <input class="form-check-input mt-0" type="checkbox" value="is_correct"
-                            aria-label="Checkbox for following text input">
-                    </div>
-                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="D) answers ...">
-                </div>
-                <button type="button" class="btn btn-primary">Next</button>
-                 next goes to next ?, @ last ? goes to results page 
-            </div>
-        </div>
-    -->
+       <!--[disabled]="answerSelected"-->
