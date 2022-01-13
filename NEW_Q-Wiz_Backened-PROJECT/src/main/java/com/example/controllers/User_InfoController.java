@@ -9,7 +9,6 @@ import com.example.entity.User_Info;
 import com.example.services.User_InfoService;
 
 @RestController
-@RequestMapping("api")
 public class User_InfoController {
 	
 		@Autowired

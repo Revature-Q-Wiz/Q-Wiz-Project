@@ -11,8 +11,8 @@ import lombok.Setter;
 //ORM ( Object Relational Mapping )
 
 
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 @Entity
 @Table(name = "user_info")
 public class User_Info {
