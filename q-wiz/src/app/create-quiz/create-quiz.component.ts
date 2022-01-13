@@ -8,9 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class CreateQuizComponent implements OnInit {
 
-  createdQs: CreatedQuiz[] = [];
-
-
   constructor() { }
 
   ngOnInit(): void {
