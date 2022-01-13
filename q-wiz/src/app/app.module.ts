@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +9,7 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
 import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 import { CreateQuestionAnswerComponent } from './create-question-answer/create-question-answer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TakeQuizComponent } from './take-quiz/take-quiz.component';
+import { TakeQuizComponent} from 'src/app/take-quiz/take-quiz.component';
 import { ResultComponent } from './result/result.component';
 import { CreateTagsComponent } from './create-tags/create-tags.component';
 import { FilterByTagsComponent } from './filter-by-tags/filter-by-tags.component';
@@ -39,6 +39,7 @@ import { ProfileComponent } from './profile/profile.component';
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/services/data.service';
+import { Quiz } from '../quiz.model';
+import {QuizService } from 'src/app/quiz.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-take-quiz',
@@ -8,18 +10,36 @@ import { DataService } from 'src/services/data.service';
 })
 export class TakeQuizComponent implements OnInit {
 
-quizzes: any[] = []
 
-  constructor(private dataService: DataService) {
+quizzes: Quiz[] = [];
+currentQuiz = 0;
+answerSelected = false;
+correctAnswers = 0;
+incorrectAnswers = 0;
 
-    dataService.getQuizzes().subscribe(data => {
-      this.quizzes = data
-    })
+result = false;
 
-
-   }
+  constructor(private quizService: QuizService) { }
 
   ngOnInit(): void {
+this.quizzes = this.quizService.getQuizzes();
+  }
+
+  onAnswer(correct: boolean){
+    this.answerSelected = true;
+    setTimeout(() => {
+      this.currentQuiz++;
+      this.answerSelected = false;
+    }, 2000);
+
+    if(correct){
+      this.correctAnswers++;
+    }
+    
+  }
+
+  showResult(){
+    this.result = true;
   }
 
 }
